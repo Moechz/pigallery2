@@ -1,0 +1,106 @@
+{
+  "app_id": "pigallery2docker",
+  "title": "PiGallery2",
+  "image": "bpatrik/pigallery2:3.5.2",
+  "repo_name": "pigallery2",
+  "mode": "wrapper",
+  "container_port": 3000,
+  "category": [
+    "Photography_Video"
+  ],
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/pigallery2docker/data",
+      "container": "/app/data"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai"
+  },
+  "auth": "bpatrik",
+  "upstream_url": "https://github.com/bpatrik/PiGallery2",
+  "upstream_license": "MIT",
+  "descript": "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS.",
+  "release_note": "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder.",
+  "important": "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space.",
+  "probe": {
+    "user_in_image": "(root)",
+    "entrypoint": [
+      "node",
+      "--expose-gc",
+      "./src/backend/index",
+      "--config-path=/app/data/config/config.json"
+    ],
+    "cmd": null,
+    "exposed_ports": [
+      80
+    ],
+    "declared_volumes": [],
+    "image_healthcheck": [
+      "CMD-SHELL",
+      "wget --quiet --tries=1 --no-check-certificate --spider   http://127.0.0.1:80/heartbeat || exit 1"
+    ],
+    "digest": "bpatrik/pigallery2@sha256:d7a61b6daa410537064d4f661122545bc4d9b16cd91a3862d654c3555cb63992",
+    "architecture": "x86_64",
+    "platforms": [
+      "x86_64",
+      "aarch64"
+    ],
+    "http_client_in_image": "wget",
+    "trial_run": {
+      "ok": false,
+      "http_code": "",
+      "state": "exited",
+      "paths": [],
+      "host_port": 18000,
+      "log_tail": "[ExtensionConfigWrapper] Error during loading config. Reverting to defaults.\nError: EACCES: permission denied, open '/app/data/config/config.json'\n    at Object.writeFileSync (node:fs:2437:20)\n    at ConfigClassType.saveSync (/app/node_modules/typeconfig/src/decorators/class/ConfigClass.js:266:32)\n    at ConfigClassType.loadSync (/app/node_modules/typeconfig/src/decorators/class/ConfigClass.js:178:26)\n    at ExtensionConfigWrapper.originalSync (/app/src/backend/model/extension/ExtensionConfigWrapper.js:43:20)\n    at Object.<anonymous> (/app/src/common/config/private/Config.js:18:66)\n    at Module._compile (node:internal/modules/cjs/loader:1706:14)\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {\n  errno: -13,\n  code: 'EACCES',\n  syscall: 'open',\n  path: '/app/data/config/config.json'\n}\n[ExtensionConfigWrapper] This is most likely due to: 1) you added a bad configuration in the server.json OR 2) The configuration changed in the latest release.\n11/13/2026, 6:54:22 PM[\u001b[32mINFO_\u001b[0m][server] running diagnostics...\n11/13/2026, 6:54:22 PM[\u001b[33mWARN_\u001b[0m][ConfigDiagnostics] [SQL error] Error: Cannot read or write sqlite storage file: /app/data/db/sqlite.db\n11/13/2026, 6:54:22 PM[\u001b[31mERROR\u001b[0m][ConfigDiagnostics] Error during initializing SQL DB, check DB connection and settings",
+      "files_in_mounts": ""
+    },
+    "docker_hub": {},
+    "github": {}
+  },
+  "healthcheck": [
+    "CMD-SHELL",
+    "wget -q -O /dev/null http://127.0.0.1:3000/ || exit 1"
+  ],
+  "entrypoint_file": "src/entrypoint.sh",
+  "platform": "x86_64",
+  "user": "1000:1000",
+  "publisher": "Moechz",
+  "compose_project": "pigallery2docker",
+  "github_repo": "pigallery2",
+  "upstream_version": "3.5.2",
+  "release_tag_prefix": "v",
+  "version": "3.5.2-1",
+  "help": "https://github.com/Moechz/pigallery2/issues",
+  "official": "https://github.com/bpatrik/PiGallery2",
+  "license": "MIT",
+  "docker_socket": false,
+  "group_add": [],
+  "healthcheck_start_period": "60s",
+  "wrapper_note": "the image listens on port 80, which an unprivileged container cannot bind, and it\nexpects a config file inside the data folder; this wrapper seeds a minimal\nconfig.json with port 3000 and starts the backend directly.",
+  "wrapper_note_readme": "- **Entrypoint wrapper**: the image binds port 80 (not allowed for uid 1000) and expects `/app/data/config/config.json`; the wrapper seeds a minimal config on port 3000 and starts the Node backend as uid 1000.",
+  "translations": {
+    "zh-cn": {
+      "descript": "PiGallery2 是一款为低功耗服务器打造的照片相册：把它指向一个照片目录，就会生成可浏览、带地图的相册，支持相册、标签、搜索与实时缩略图。它使用 SQLite，资源占用远低于完整的照片套件，很适合常开的 NAS。",
+      "important": "需要 DockerEngine（缺失时应用中心会自动安装）。把照片放到 DockerAppData/pigallery2docker/images（TOS 文件管理器看不到，请用 SMB/SSH 拷入）；应用会索引该目录并生成缩略图。账号与 SQLite 数据库保存在 .../data。界面为纯 HTTP，暴露到公网前请配置带 TLS 的反向代理。照片较多时首次索引较慢，缩略图也会占用磁盘。",
+      "release_note": "1. 首个版本：基于 Docker Hub 的 PiGallery2 3.5.2，以非 root 容器运行在 3000 端口。基于目录的相册，支持专辑、地图与实时缩略图；数据与照片都在应用数据目录。"
+    },
+    "zh-hk": {
+      "descript": "PiGallery2 是一款為低功耗伺服器打造的照片相簿：把它指向一個照片目錄，就會產生可瀏覽、帶地圖的相簿，支援專輯、標籤、搜尋與即時縮圖。它使用 SQLite，資源佔用遠低於完整的照片套件，很適合常開的 NAS。",
+      "important": "需要 DockerEngine（缺少時應用中心會自動安裝）。把照片放到 DockerAppData/pigallery2docker/images（TOS 檔案管理器看不到，請用 SMB/SSH 拷入）；應用會索引該目錄並產生縮圖。帳號與 SQLite 資料庫保存在 .../data。介面為純 HTTP，公開到互聯網前請配置帶 TLS 的反向代理。照片較多時首次索引較慢，縮圖也會佔用磁碟。",
+      "release_note": "1. 首個版本：基於 Docker Hub 的 PiGallery2 3.5.2，以非 root 容器運行在 3000 端口。基於目錄的相簿，支援專輯、地圖與即時縮圖；資料與照片都在應用資料目錄。"
+    }
+  },
+  "data_notes": "`/app/data` keeps the SQLite database, users and the generated config; `/app/images` (mounted from `.../images`) is the folder the gallery indexes - the photos themselves stay untouched.",
+  "design_notes": [
+    "**Port moved to 3000.** The image binds 80 by default, which an unprivileged container cannot do; the wrapper seeds `config.json` with `Server.port = 3000`.",
+    "**SQLite only.** No database server; the gallery is a folder plus a small database."
+  ],
+  "limitations": [
+    "- The images folder is not visible in TOS File Manager; add photos over SMB/SSH.",
+    "- Indexing a large library takes time and thumbnails consume extra disk space.",
+    "- The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+  ],
+  "host_port": 8050
+}

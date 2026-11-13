@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "pigallery2docker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[zh-cn]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 是一款为低功耗服务器打造的照片相册：把它指向一个照片目录，就会生成可浏览、带地图的相册，支持相册、标签、搜索与实时缩略图。它使用 SQLite，资源占用远低于完整的照片套件，很适合常开的 NAS。"
+release_note = "1. 首个版本：基于 Docker Hub 的 PiGallery2 3.5.2，以非 root 容器运行在 3000 端口。基于目录的相册，支持专辑、地图与实时缩略图；数据与照片都在应用数据目录。"
+important    = "需要 DockerEngine（缺失时应用中心会自动安装）。把照片放到 DockerAppData/pigallery2docker/images（TOS 文件管理器看不到，请用 SMB/SSH 拷入）；应用会索引该目录并生成缩略图。账号与 SQLite 数据库保存在 .../data。界面为纯 HTTP，暴露到公网前请配置带 TLS 的反向代理。照片较多时首次索引较慢，缩略图也会占用磁盘。"
+
+[zh-hk]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 是一款為低功耗伺服器打造的照片相簿：把它指向一個照片目錄，就會產生可瀏覽、帶地圖的相簿，支援專輯、標籤、搜尋與即時縮圖。它使用 SQLite，資源佔用遠低於完整的照片套件，很適合常開的 NAS。"
+release_note = "1. 首個版本：基於 Docker Hub 的 PiGallery2 3.5.2，以非 root 容器運行在 3000 端口。基於目錄的相簿，支援專輯、地圖與即時縮圖；資料與照片都在應用資料目錄。"
+important    = "需要 DockerEngine（缺少時應用中心會自動安裝）。把照片放到 DockerAppData/pigallery2docker/images（TOS 檔案管理器看不到，請用 SMB/SSH 拷入）；應用會索引該目錄並產生縮圖。帳號與 SQLite 資料庫保存在 .../data。介面為純 HTTP，公開到互聯網前請配置帶 TLS 的反向代理。照片較多時首次索引較慢，縮圖也會佔用磁碟。"
+
+[fr-fr]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[de-de]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[it-it]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[es-es]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[hu-hu]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[ja-jp]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[ko-kr]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[pl-pl]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[ru-ru]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[tr-tr]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[pt-pt]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[ar-sa]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[cs-cz]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[he-il]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[id-id]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[nb-no]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[nl-nl]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[sv-se]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[th-th]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
+[vi-vn]
+name         = "PiGallery2"
+auth         = "bpatrik"
+version      = "@@VERSION@@"
+descript     = "PiGallery2 is a fast photo gallery built for low-power servers: point it at a folder of photos, and it builds a browsable, map-aware gallery with albums, tags, search and on-the-fly thumbnails. It uses SQLite and runs on a fraction of the resources a full photo suite needs - a good fit for an always-on NAS."
+release_note = "1. First release: PiGallery2 3.5.2 from Docker Hub as a non-root container on port 3000. Folder-based photo gallery with albums, map view and on-the-fly thumbnails; data and photos in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put photos in DockerAppData/pigallery2docker/images (TOS File Manager cannot browse it - copy over SMB/SSH); the app indexes the folder and generates thumbnails. Accounts and the SQLite database live in .../data. The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet. Large libraries take a while to index and thumbnails take disk space."
+
